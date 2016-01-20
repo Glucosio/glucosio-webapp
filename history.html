@@ -1,102 +1,97 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="css/layout.css" media="screen,projection"/>
-
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/layout.css" media="screen,projection" /><!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
   
-    </head>
-
-    <body class="glucose_yellow">
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/scripts.js"></script>
-  <div class="container">     
-         
-    <div class="row"> 
-      
-      <div class="col s6">
-        <img class="responsive-img" src="img/GlucosioHorizontalPink_rgb_600_158.png"/></div>
-        <img class="responsive-img" src="img/Glucat_rgb_416_600.png"/>
-      
-      </div>
-      <!-- tabs -->
-<div class="row">
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s3"><a href="#test1">OVERVIEW</a></li>
-        <li class="tab col s3"><a class="active" href="">HISTORY</a></li>
-        <li class="tab col s3"><a href="assistant.html">ASSISTANT</a></li>
-      </ul>
-    </div>
-    
-    
-      <!--PAGE CONTENT --->
-      
-        
-        <div class="col s9 card-panel" style="background-color : white">   
-            <table class="highlight">
-        <thead>
-          <tr>  
-              <th data-field="time">Time</th>
-              <th data-field="value">Value</th>
-              
-              </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Test 1</td>
-            <td>Test 1</td>
-          </tr>
-          <tr>
-            <td>Test 2</td>
-            <td>Test 2</td>
-          </tr>
-          <tr>
-            <td>Test 3</td>
-              <td>Test 3</td>       
-          </tr>
-        </tbody>
-      </table>     
-            
-            <!-- FAB should follow the bottom border of the table moved just a little bit on the left -->
-            
-        <div class="fixed-action-btn horizontal" style="right:180px; bottom:220px">
-                 <a class="btn-floating btn-large red">
-                 <i class="large material-icons">add</i>
-                 </a>
-                 <ul>   <!-- ADD HERE GLUCOSE ANDROID APP'S ICONS -->
-                     <li><a class="btn-floating red"><i class="material-icons">error_outline</i></a></li>
-                     <li><a class="btn-floating red"><i class="material-icons">error_outline</i></a></li>
-                     <li><a class="btn-floating red"><i class="material-icons">error_outline</i></a></li>
-                     <li><a class="btn-floating red"><i class="material-icons">error_outline</i></a></li>
-                     <li><a class="btn-floating red"><i class="material-icons">error_outline</i></a></li>
-                     <li><a class="btn-floating red"><i class="material-icons">error_outline</i></a></li>
-                 </ul>          
-                </div> 
-            
-        
-        
-        
+  <body class="glucose_yellow">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+</script><script type="text/javascript" src="js/materialize.min.js">
+</script><script type="text/javascript" src="js/scripts.js">
+</script>
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <img class="responsive-img" src="img/GlucosioHorizontalPink_rgb_600_158.png" alt="" />
+        </div><img class="responsive-img" src="img/Glucat_rgb_416_600.png" alt="" />
+      </div><!-- tabs -->
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s3">
+              <a href="#test1">OVERVIEW</a>
+            </li>
+            <li class="tab col s3">
+              <a class="active" href="#">HISTORY</a>
+            </li>
+            <li class="tab col s3">
+              <a href="/assistant.html">ASSISTANT</a>
+            </li>
+          </ul>
+        </div><!-- PAGE CONTENT -->
+        <div class="col s11 card-panel">
+          <table class="highlight">
+            <thead>
+              <tr>
+                <th data-field="time">
+                  Time
+                </th>
+                <th data-field="value">
+                  Value
+                </th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Test 1
+                </td>
+                <td>
+                  Test 1
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Test 2
+                </td>
+                <td>
+                  Test 2
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Test 3
+                </td>
+                <td>
+                  Test 3
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="position: relative">
+         <div class="fixed-action-btn horizontal tooltipped" data-position="right" data delay="0" data-tooltip="Add a reading" style="position: absolute; right:0px; bottom:130px">
+             <a class="btn-floating btn-large red">
+             <i class="large material-icons">add</i>
+             </a>
+             <ul>   <!-- ADD HERE GLUCOSE ANDROID APP'S ICONS -->
+                 <li><a class="btn-floating pink"><i class="material-icons">error_outline</i></a></li>
+                 <li><a class="btn-floating orange"><i class="material-icons">error_outline</i></a></li>
+                 <li><a class="btn-floating yellow"><i class="material-icons">error_outline</i></a></li>
+                 <li><a class="btn-floating green"><i class="material-icons">error_outline</i></a></li>
+                 <li><a class="btn-floating blue"><i class="material-icons">error_outline</i></a></li>
+                 <li><a class="btn-floating purple"><i class="material-icons">error_outline</i></a></li>
+             </ul>          
+            </div> 
         </div>
-             
-        
-    
-    </div>
-      
+       </div>    
       </div>
-      
-      <!-- footer -->
-      
-      <footer class="page-footer glucose_pink">
+      </div>
+      <footer style="glucose_pink" class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col s4">
@@ -124,10 +119,4 @@
             </div>
           </div>  
         </footer>
-      
-        
-        </div> <!-- container -->
-      
-      </body>
-
 </html>
