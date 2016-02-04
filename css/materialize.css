@@ -7965,7 +7965,7 @@ small {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: 48px;
   background-color: #EECE4B;
