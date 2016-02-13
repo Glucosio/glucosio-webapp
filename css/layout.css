@@ -19,3 +19,8 @@
 /* icon prefix focus color */
 .input-field .prefix.active {
      color: #FF047B;
+}
+.materialize-textarea:focus {
+    border-bottom: 1px solid #FF047B;
+    box-shadow: 0 1px 0 0 #FF047B;
+}

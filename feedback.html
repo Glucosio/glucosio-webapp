@@ -1,104 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='glucosio'>
   <head>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
+    <!-- import css -->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/layout.css" media="screen,projection" /><!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/layout.css" media="screen,projection" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
 
   <body class="glucose_yellow">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
-</script><script type="text/javascript" src="js/materialize.min.js">
-</script><script type="text/javascript" src="js/scripts.js">
-</script>
     <div class="container">
       <div class="row">
         <div class="col s6">
           <img class="responsive-img" src="img/GlucosioHorizontalPink_rgb_600_158.png" alt="" />
         </div><img class="responsive-img" src="img/Glucat_rgb_416_600.png" alt="" />
       </div>
-        <!-- tabs -->
-      <div class="row">
-        <div class="col s12">
-          <ul class="tabs">
-            <li class="tab col s3">
-              <a href="#test1">OVERVIEW</a>
-            </li>
-            <li class="tab col s3">
-              <a class="active" href="#">HISTORY</a>
-            </li>
-            <li class="tab col s3">
-              <a href="/assistant.html">ASSISTANT</a>
-            </li>
-          </ul>
-        </div>
           <!-- PAGE CONTENT -->
-      </div>
         <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                          <i class="material-icons prefix">account_circle</i>
-                          <input id="icon_prefix" type="text" class="validate">
-                          <label for="icon_prefix">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-                    </div>  
-                </div>    
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Type your message here:</label>
-                    </div>
-                </div> 
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">email</i>
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Email</label>
-                    </div>
-                    <div class="col s6">
-                        <button class="btn btn-large waves-effect waves-light glucose_pink" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                        </button>
-                    </div>                
-                </div>
-                    
- 
-            </form>
+            <form class="col s12" novalidate>
+              <div class="row">
+                  <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">First Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate" required>
+                      <label for="last_name">Last Name</label>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s12">
+                      <i class="material-icons prefix">mode_edit</i>
+                      <textarea id="icon_prefix2" class="materialize-textarea" required></textarea>
+                      <label for="icon_prefix2">Type your message here:</label>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s6">
+                      <i class="material-icons prefix">email</i>
+                      <input id="icon_prefix" type="text" class="validate" required>
+                      <label for="icon_prefix">Email</label>
+                  </div>
+                  <div class="col s6">
+                      <button class="btn btn-large waves-effect glucose_pink" type="submit" name="action">Submit
+                      <i class="material-icons right">send</i>
+                      </button>
+                  </div>
+              </div>
+          </form>
         </div>
       </div>
-      <footer  class="page-footer glucose_pink">
-          <div class="container">
-            <div class="row">
-              <div class="col s4">
-                <h5 class="white-text">© 2015 Glucosio</h5>
-                <p class="grey-text text-lighten-4">User centered free and open source apps for diabetes management and research.</p>
-              </div>
-              <div class="col s4 offset-s1">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="http://glucosio.org">Project Website</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://glucosio.org/terms">Terms of Service</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://glucosio.org/privacy">Privacy Policy</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://glucosio.org/licensing">Licensing Policy</a></li>
-                </ul>
-              </div>
-                <div class="col s2">
-                <h5 class="white-text">Social</h5>    <!--ADD SOCIAL ICONS WITH SHARE LINKS -->
-                    <ul>
-                        <li><a></a></li>
-                        <li><a></a></li>
-                        <li><a></a></li>
-                        <li><a></a></li>
-                    </ul>
-                </div>
-            </div>
-          </div>
-        </footer>
+      <footer-content></footer-content>
 </html>
