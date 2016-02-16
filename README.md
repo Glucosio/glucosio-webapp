@@ -1,2 +1,2 @@
 # Glucosio Web App
-Glucosio's official Web App
+Glucosio's Experimental Web App
