@@ -47,5 +47,3 @@ var app = angular.module('glucosio',[ ]);
         templateUrl: 'views/footer-content.html',
       }
     });
-
-    

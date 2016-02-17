@@ -40,47 +40,82 @@
         </tbody>
       </table>
       <div style="position: relative">
-     <div class="fixed-action-btn horizontal tooltipped" data-position="right" data delay="0" data-tooltip="Add a reading" style="position: absolute; right:0px; bottom:130px">
+     <div class="fixed-action-btn tooltipped horizontal click-to-toggle" data-position="right" data delay="0" data-tooltip="Add a reading" style="position: absolute; right:0px; bottom:130px">
          <a class="btn-floating btn-large glucose_pink">
          <i class="large material-icons">add</i>
          </a>
          <ul>
-           <!-- ADD HERE GLUCOSE ANDROID APP'S ICONS -->
-           <!-- can't initialize modal -->
-             <li><a class="btn-floating glucose_pink modal-trigger" href="#glucose"><i class="material-icons">error_outline</i></a></li>
-
-             <div id="glucose" class="modal modal-fixed-footer">
-               <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-               </div>
-              <div class="modal-footer">
-               <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-              </div>
-             </div>
-
-             <li><a class="btn-floating orange"><i class="material-icons">error_outline</i></a></li>
-             <li><a class="btn-floating yellow"><i class="material-icons">error_outline</i></a></li>
-             <li><a class="btn-floating green"><i class="material-icons">error_outline</i></a></li>
-             <li><a class="btn-floating blue"><i class="material-icons">error_outline</i></a></li>
-             <li><a class="btn-floating purple"><i class="material-icons">error_outline</i></a></li>
+           <!-- ADD HERE GLUCOSE ANDROID APP'S ICONS; modal placeholders-->
+             <li><a class="btn-floating glucose_pink modal-trigger" data-target="glucose"><i class="material-icons">error_outline</i></a></li>
+             <li><a class="btn-floating orange modal-trigger" data-target=""><i class="material-icons">error_outline</i></a></li>
+             <li><a class="btn-floating yellow modal-trigger" data-target=""><i class="material-icons">error_outline</i></a></li>
+             <li><a class="btn-floating green modal-trigger" data-target=""><i class="material-icons">error_outline</i></a></li>
+             <li><a class="btn-floating blue modal-trigger" data-target=""><i class="material-icons">error_outline</i></a></li>
+             <li><a class="btn-floating purple modal-trigger" data-target=""><i class="material-icons">error_outline</i></a></li>
          </ul>
         </div>
     </div>
-    <!-- Modal Trigger -->
-  <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-    </div>
-  </div>
+    <!-- Modals with forms -->
 
+    <!-- Glucose -->
+    <div id="glucose" class="modal">
+      <div class="modal-content">
+       <h4>Add Glucose Reading</h4>
+       <form class="col s12" novalidate>
+         <div class="row">
+             <div class="input-field col s12">
+                   <input id="icon_prefix" type="text" class="validate" required>
+                   <label for="icon_prefix">Concentration</label>
+             </div>
+             <div class="input-field col s6">
+                 <input value="" id="date" type="text" class="datepicker validate" required>
+                 <label for="date" class="active">Date</label>
+             </div>
+             <div class="input-field col s6">
+                 <input id="time" type="text" class="validate" required>
+                 <label for="time" class="active">Time</label>
+             </div>
+         </div>
+         <div class="row">
+           <div class="input-field col s6">
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Measured</label>
+          </div>
+             <div class="col s4">
+                 <button class="btn btn-large waves-effect glucose_pink" type="submit" name="action">Add Reading
+                 <i class="material-icons right">add</i>
+                 </button>
+             </div>
+         </div>
+       </div>
+      </form>
+      </div>
+
+
+
+    </div>
    </div>
   </div>
   </div>
+
+
+<script>
+  $(document).ready(function(){
+    $('.modal-trigger').leanModal();
+  });
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+
+  $('.datepicker').pickadate({
+    selectMonths: true,
+    selectYears: 1,
+  });
+</script>
